@@ -1,0 +1,26 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.5'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'application'
+}
+
+group = 'com.solenix'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+implementation group: 'commons-net', name: 'commons-net', version: '3.6'
+}
+
+mainClassName  = 'com.solenix.main.LogFileAgent'
